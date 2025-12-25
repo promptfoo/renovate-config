@@ -8,6 +8,13 @@
   "pinVersions": false,
   "packageRules": [
     {
+      "description": "Security vulnerabilities bypass all schedules and minimumReleaseAge restrictions",
+      "matchDatasources": ["npm"],
+      "vulnerabilitySeverity": ["low", "moderate", "high", "critical"],
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
       "description": "Group Biome package with biome.json schema updates",
       "matchPackageNames": ["@biomejs/biome"],
       "groupName": "biome"

@@ -33,4 +33,5 @@ Or extend it alongside other settings:
 | `:disableDependencyDashboard` | - | No dashboard issue created |
 | `pinVersions` | `false` | Preserve semver ranges (e.g., `^1.0.0`) |
 | `customManagers:biomeVersions` | - | Auto-update `$schema` in `biome.json` |
+| Security vulnerabilities | Priority | Security updates bypass all schedules and `minimumReleaseAge` restrictions |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |

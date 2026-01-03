@@ -6,6 +6,10 @@
     "customManagers:biomeVersions"
   ],
   "pinVersions": false,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on Sunday"]
+  },
   "packageRules": [
     {
       "description": "Security vulnerabilities bypass all schedules and minimumReleaseAge restrictions",
@@ -22,7 +26,7 @@
     {
       "description": "Limit lucide-react updates to bi-weekly schedule (icon library with excessive release frequency)",
       "matchPackageNames": ["lucide-react"],
-      "schedule": ["every 2 weeks on Monday"]
+      "schedule": ["every 2 weeks on Sunday"]
     }
   ]
 }

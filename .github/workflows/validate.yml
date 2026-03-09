@@ -1,0 +1,15 @@
+name: Validate Renovate Config
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npx --yes --package renovate -- renovate-config-validator default.json

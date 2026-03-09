@@ -31,7 +31,18 @@ Or extend it alongside other settings:
 |---------|-------|-------------|
 | `config:recommended` | - | Renovate's recommended base config |
 | `:disableDependencyDashboard` | - | No dashboard issue created |
-| `pinVersions` | `false` | Preserve semver ranges (e.g., `^1.0.0`) |
+| `rangeStrategy` | `replace` | Preserve semver ranges instead of pinning versions |
 | `customManagers:biomeVersions` | - | Auto-update `$schema` in `biome.json` |
-| Security vulnerabilities | Priority | Security updates bypass all schedules and `minimumReleaseAge` restrictions |
+| `vulnerabilityAlerts` | Immediate | Security PRs bypass scheduling and `minimumReleaseAge` delays |
+| Biome pinning | `pin` | Pins `@biomejs/biome` so installed Biome matches the schema version |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |
+
+## Validation
+
+Validate the shared config locally with Renovate's official validator:
+
+```sh
+npx --yes --package renovate -- renovate-config-validator default.json
+```
+
+Pull requests are also checked automatically by GitHub Actions.

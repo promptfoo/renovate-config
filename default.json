@@ -5,18 +5,21 @@
     ":disableDependencyDashboard",
     "customManagers:biomeVersions"
   ],
-  "pinVersions": false,
+  "rangeStrategy": "replace",
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 6am on Sunday"]
   },
+  "vulnerabilityAlerts": {
+    "schedule": ["at any time"],
+    "minimumReleaseAge": null
+  },
   "packageRules": [
     {
-      "description": "Security vulnerabilities bypass all schedules and minimumReleaseAge restrictions",
-      "matchDatasources": ["npm"],
-      "vulnerabilitySeverity": ["low", "moderate", "high", "critical"],
-      "schedule": ["at any time"],
-      "minimumReleaseAge": "0 days"
+      "description": "Pin @biomejs/biome so the installed package stays aligned with biome.json schema updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@biomejs/biome"],
+      "rangeStrategy": "pin"
     },
     {
       "description": "Group Biome package with biome.json schema updates",

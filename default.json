@@ -16,6 +16,12 @@
   },
   "packageRules": [
     {
+      "description": "Pin @biomejs/biome so the installed package stays aligned with biome.json schema updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@biomejs/biome"],
+      "rangeStrategy": "pin"
+    },
+    {
       "description": "Group Biome package with biome.json schema updates",
       "matchPackageNames": ["@biomejs/biome"],
       "groupName": "biome"

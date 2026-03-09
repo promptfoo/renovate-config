@@ -34,6 +34,7 @@ Or extend it alongside other settings:
 | `rangeStrategy` | `replace` | Preserve semver ranges instead of pinning versions |
 | `customManagers:biomeVersions` | - | Auto-update `$schema` in `biome.json` |
 | `vulnerabilityAlerts` | Immediate | Security PRs bypass scheduling and `minimumReleaseAge` delays |
+| Biome pinning | `pin` | Pins `@biomejs/biome` so installed Biome matches the schema version |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |
 
 ## Validation

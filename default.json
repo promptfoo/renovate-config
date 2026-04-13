@@ -47,6 +47,13 @@
       "matchManagers": ["github-actions"],
       "matchDepTypes": ["action"],
       "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Skip the waiting period for first-party promptfoo GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "matchPackageNames": ["promptfoo/**"],
+      "minimumReleaseAge": null
     }
   ]
 }

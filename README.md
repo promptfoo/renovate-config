@@ -33,6 +33,8 @@ Or extend it alongside other settings:
 | `:disableDependencyDashboard` | - | No dashboard issue created |
 | `rangeStrategy` | `replace` | Preserve semver ranges instead of pinning versions |
 | `customManagers:biomeVersions` | - | Auto-update `$schema` in `biome.json` |
+| `helpers:pinGitHubActionDigests` | - | Pins GitHub Actions to commit SHAs so Renovate can open digest updates when an action tag moves |
+| GitHub Actions release age | `3 days` | Wait briefly before opening GitHub Actions update PRs so fresh action changes can settle |
 | `vulnerabilityAlerts` | Immediate | Security PRs bypass scheduling and `minimumReleaseAge` delays |
 | Biome pinning | `pin` | Pins `@biomejs/biome` so installed Biome matches the schema version |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |

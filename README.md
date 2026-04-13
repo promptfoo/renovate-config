@@ -38,6 +38,7 @@ Or extend it alongside other settings:
 | `vulnerabilityAlerts` | Immediate | Security PRs bypass scheduling and `minimumReleaseAge` delays |
 | Biome pinning | `pin` | Pins `@biomejs/biome` so installed Biome matches the schema version |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |
+| GitHub Actions updates | Monthly | Schedules `github-actions` updates once per month |
 
 ## Validation
 

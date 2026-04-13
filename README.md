@@ -34,10 +34,12 @@ Or extend it alongside other settings:
 | `rangeStrategy` | `replace` | Preserve semver ranges instead of pinning versions |
 | `customManagers:biomeVersions` | - | Auto-update `$schema` in `biome.json` |
 | `helpers:pinGitHubActionDigests` | - | Pins GitHub Actions to commit SHAs so Renovate can open digest updates when an action tag moves |
-| GitHub Actions release age | `3 days` | Wait briefly before opening GitHub Actions update PRs so fresh action changes can settle |
+| GitHub Actions release age | `3 days` | Wait briefly before opening non-`promptfoo/*` GitHub Actions update PRs so fresh upstream action changes can settle |
+| First-party GitHub Actions release age | Immediate | `promptfoo/*` action updates bypass the waiting period |
 | `vulnerabilityAlerts` | Immediate | Security PRs bypass scheduling and `minimumReleaseAge` delays |
 | Biome pinning | `pin` | Pins `@biomejs/biome` so installed Biome matches the schema version |
 | Biome grouping | - | Groups `@biomejs/biome` with `biome.json` schema updates |
+| GitHub Actions updates | Monthly | Schedules `github-actions` updates once per month |
 
 ## Validation
 

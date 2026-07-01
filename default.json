@@ -43,10 +43,17 @@
       "schedule": ["every 2 weeks on Sunday"]
     },
     {
-      "description": "Let GitHub Action digest updates settle briefly before opening PRs",
+      "description": "Require a brief release age for timestamped GitHub Action updates",
       "matchManagers": ["github-actions"],
       "matchDepTypes": ["action"],
       "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Allow GitHub Action digest updates when release timestamps are unavailable",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "matchUpdateTypes": ["digest"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
     },
     {
       "description": "Skip the waiting period for first-party promptfoo GitHub Actions",

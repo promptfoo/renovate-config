@@ -17,4 +17,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           timeout-seconds: 300
-          ignore-checks: '^renovate/stability-days$'
